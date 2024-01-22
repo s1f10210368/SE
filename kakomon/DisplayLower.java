@@ -6,6 +6,7 @@
  */
 
 import java.util.Scanner;
+// Scannerを用いてユーザーからの入力を受け付ける
 
 public class DisplayLower {
    public static void main(String args[]){
