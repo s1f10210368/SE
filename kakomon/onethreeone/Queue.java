@@ -1,6 +1,9 @@
 package onethreeone;
 
-public class Queue {
+public interface Queue {
+
+    
+}class Queue {
     private String array[] = new String[100];
     private int front = 0;
     private int rear = 0;

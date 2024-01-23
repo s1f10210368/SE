@@ -20,6 +20,7 @@ public class Queue {
         }
         array[rear] = x;
         rear = (rear + 1) % 100;
+        notifyOBservers();
     }
 
     public String dequeue() {
@@ -28,6 +29,7 @@ public class Queue {
         }
         String result = array[front];
         front = (front + 1) % 100;
+        notifyOBservers();
         return result;
     }
 
@@ -52,4 +54,12 @@ public class Queue {
         }
     }
 }
+
+/*
+ * Queue クラスに以下の機能を追加しなさい。 なお、この問いではシングルトンにしないこと。
+
+addObserver メソッドで、 Observer インタフェースを実装したクラスのインスタンスを複数登録することができる。
+enqueue および dequeue メソッドが呼び出されるつど、 addObserver メソッドで登録されたインスタンスのメソッドが呼び出される。
+以下の Observer インタフェース、 MyObserver クラスとともに Main2 クラスを実行した際に、動作例の通りに表示されるようにすること。
+ */
 
